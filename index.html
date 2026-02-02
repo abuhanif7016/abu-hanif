@@ -1,12 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#1f2937">
+  <title>Md Abu Hanif | Portfolio</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+  </style>
 </head>
-<body>
-    
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+
+<!-- ================= NAVBAR ================= -->
+<header class="fixed  w-full bg-white dark:bg-gray-900 shadow z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 py-2 flex justify-between items-center">
+
+    <h1 class="text-3xl sm:text-2xl md:text-3xl font-mono text-blue-500">Abu Hanif</h1>
+
+    <div class="hidden sm:block"><span id="bd-time" class="text-xs sm:text-sm font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-red-600"></span></div>
+
+    <nav class="hidden md:flex space-x-8">
+      <a href="#home" class="hover:text-blue-500 transition-colors">Home</a>
+      <a href="#about" class="hover:text-blue-500 transition-colors">About</a>
+      <a href="#skills" class="hover:text-blue-500 transition-colors">Skills</a>
+      <a href="#projects" class="hover:text-blue-500 transition-colors">Projects</a>
+      <a href="#contact" class="hover:text-blue-500 transition-colors">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3 sm:gap-4">
+      
+      <button id="theme-toggle" class="p-2 rounded transition-colors" aria-label="Toggle theme">🌙</button>
+      <button id="menu-btn" class="md:hidden text-xl p-2 rounded transition-colors" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 px-3 py-3 text-center border-t dark:border-gray-700">
+    <a href="#home" class="block py-2 hover:text-blue-500 transition-colors">Home</a>
+    <a href="#about" class="block py-2 hover:text-blue-500 transition-colors">About</a>
+    <a href="#skills" class="block py-2 hover:text-blue-500 transition-colors">Skills</a>
+    <a href="#projects" class="block py-2 hover:text-blue-500 transition-colors">Projects</a>
+    <a href="#contact" class="block py-2 hover:text-blue-500 transition-colors">Contact</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="min-h-screen flex items-center px-4 sm:px-6 md:px-8">
+  <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-4 md:gap-8 items-center">
+    <div>
+      <h2 class="md:pt-0 pt-20 text-2xl text-center md:text-left md:text-5xl font-mono leading-tight">Hey, I'm Abu Hanif</h2><hr class="my-4">
+      <p id="typing" class="text-sm sm:text-center text-center font-semibold font-mono sm:text-xl text-gray-700 dark:text-gray-300 mt-4 h-8"></p>
+      <p class="mt-1 text-center md:text-left font-sans sm:text-lg text-sm text-gray-600 dark:text-gray-300 sm:mt-9 border-l-transparent sm:border-l-4 sm:pl-4">
+        I specialize in building modern, professional, and responsive web applications and websites that provide seamless user experiences across all devices. My work focuses on clean, maintainable code using HTML, CSS, JavaScript, Tailwind CSS, and frameworks such as React (basic) and Next.js (basic). I am passionate about web design, responsive design.
+      </p>
+    </div>
+    <img src="img/hanif.jpg" class="w-48 sm:w-56 md:w-72 mx-auto rounded-full shadow-lg" alt="Abu Hanif">
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-16 sm:py-20 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto w-full">
+
+  <!-- Heading -->
+  <div class="text-center mb-12">
+    <h2 class="text-3xl sm:text-4xl font-bold text-blue-500 mb-1 sm:mb-2">
+      About Me
+    </h2>
+    <p class="text-gray-500 dark:text-gray-400 sm:text-sm text-xs">
+      My Introduction
+    </p>
+  </div>
+
+  <!-- Content -->
+  <div class="flex flex-col md:flex-row items-center gap-10">
+
+    <!-- Left: Profile Image -->
+    <div class="md:w-1/2 flex justify-center">
+      <img 
+        src="img/hanif.jpg" 
+        alt="Md Abu Hanif"
+        class="w-64 sm:w-72 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+      >
+    </div>
+
+    <!-- Right: Description -->
+    <div class="md:w-1/2">
+      <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed text-center md:text-left">
+        I am a frontend developer skilled in HTML, Tailwind CSS, JavaScript, and React.
+        I focus on building clean, responsive, and user-friendly interfaces with strong
+        attention to performance, accessibility, and modern web standards.
+      </p>
+    </div>
+
+  </div>
+
+    <!-- CV Download Button -->
+  <div class="mt-4 flex  justify-center">
+    <a 
+      href="assets/MdAbuHanif_CV.pdf" 
+      download
+      class="bg-blue-500 text-white px-8 py-3 rounded-md font-medium hover:bg-blue-600 transition-transform transform hover:scale-105"
+    >
+      Download CV
+    </a>
+  </div>
+
+  <!-- Stats Section -->
+  <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+
+    <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-3xl font-bold text-blue-500">1+</h3>
+      <p class="text-gray-600 dark:text-gray-300 mt-1">Years Experience</p>
+    </div>
+
+    <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-3xl font-bold text-blue-500">10+</h3>
+      <p class="text-gray-600 dark:text-gray-300 mt-1">Projects Completed</p>
+    </div>
+
+    <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-3xl font-bold text-blue-500">5+</h3>
+      <p class="text-gray-600 dark:text-gray-300 mt-1">Worked With</p>
+    </div>
+
+    <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-3xl font-bold text-blue-500">5+</h3>
+      <p class="text-gray-600 dark:text-gray-300 mt-1">Worked With</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="py-16 sm:py-20 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto w-full">
+  <h2 class="text-3xl sm:text-4xl font-bold text-blue-500 mb-10">Skills</h2>
+
+  <div class="space-y-6">
+    <div>
+      <p class="text-sm sm:text-base font-semibold mb-2">HTML</p>
+      <div class="bg-gray-300 dark:bg-gray-700 h-3 rounded">
+        <div class="skill-bar bg-blue-500 h-3 rounded" data-width="95%"></div>
+      </div>
+    </div>
+
+    <div>
+      <p class="text-sm sm:text-base font-semibold mb-2">Tailwind CSS</p>
+      <div class="bg-gray-300 dark:bg-gray-700 h-3 rounded">
+        <div class="skill-bar bg-blue-500 h-3 rounded" data-width="90%"></div>
+      </div>
+    </div>
+
+    <div>
+      <p class="text-sm sm:text-base font-semibold mb-2">JavaScript</p>
+      <div class="bg-gray-300 dark:bg-gray-700 h-3 rounded">
+        <div class="skill-bar bg-blue-500 h-3 rounded" data-width="85%"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="py-16 sm:py-20 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto w-full">
+  <h2 class="text-3xl sm:text-4xl font-bold text-blue-500 mb-10">Projects</h2>
+
+  <div class="grid sm:grid-cols-2 gap-6 sm:gap-8">
+    <div class="bg-gray-100 dark:bg-gray-800 p-4 sm:p-6 rounded hover:scale-105 transition">
+      <img src="images/project1.png" class="rounded mb-4" alt="Project 1">
+      <h3 class="text-lg sm:text-xl font-bold">Portfolio Website</h3>
+      <div class="mt-4 flex gap-3 flex-wrap">
+        <a href="#" class="bg-blue-500 px-4 py-2 rounded text-sm hover:bg-blue-600 transition">Live</a>
+        <a href="#" class="border border-blue-500 px-4 py-2 rounded text-sm hover:bg-blue-500 hover:text-white transition">GitHub</a>
+      </div>
+    </div>
+
+    <div class="bg-gray-100 dark:bg-gray-800 p-4 sm:p-6 rounded hover:scale-105 transition">
+      <img src="images/project2.png" class="rounded mb-4" alt="Project 2">
+      <h3 class="text-lg sm:text-xl font-bold">Landing Page</h3>
+      <div class="mt-4 flex gap-3 flex-wrap">
+        <a href="#" class="bg-blue-500 px-4 py-2 rounded text-sm hover:bg-blue-600 transition">Live</a>
+        <a href="#" class="border border-blue-500 px-4 py-2 rounded text-sm hover:bg-blue-500 hover:text-white transition">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-16 sm:py-20 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto w-full">
+  <h2 class="text-3xl sm:text-4xl font-bold text-blue-500 mb-6">Contact</h2>
+  <p class="text-base sm:text-lg mb-2">Email: abuhanif@example.com</p>
+  <p class="text-base sm:text-lg">GitHub: github.com/mdabuhanif</p>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="text-center py-6 text-gray-500">
+  © 2026 Md Abu Hanif — All Rights Reserved
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
