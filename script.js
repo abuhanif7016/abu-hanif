@@ -125,3 +125,52 @@ const skillBars = document.querySelectorAll(".skill-bar");
       bar.style.width = percent + "%";
     });
   });
+
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const scrollElements = document.querySelectorAll(".scroll-animate");
+  const headingElement = document.querySelector(".scroll-heading");
+
+  const elementInView = (el, offset = 0) => {
+    const elementTop = el.getBoundingClientRect().top;
+    return elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset;
+  };
+
+  const displayScrollElement = (el) => {
+    el.classList.add("opacity-100", "translate-y-0");
+    el.classList.remove("opacity-0", "translate-y-10");
+  };
+
+  const hideScrollElement = (el) => {
+    el.classList.add("opacity-0", "translate-y-10");
+    el.classList.remove("opacity-100", "translate-y-0");
+  };
+
+  const handleScrollAnimation = () => {
+    // Responsive offset
+    let offset = 100;
+    if (window.innerWidth < 768) offset = 50;
+    if (window.innerWidth < 480) offset = 30;
+
+    // Animate heading
+    if (headingElement && elementInView(headingElement, offset)) {
+      headingElement.classList.add("opacity-100", "translate-x-0");
+      headingElement.classList.remove("opacity-0", "-translate-x-20");
+    }
+
+    // Animate timeline items
+    scrollElements.forEach((el) => {
+      if (elementInView(el, offset)) {
+        displayScrollElement(el);
+      } else {
+        hideScrollElement(el);
+      }
+    });
+  };
+
+  window.addEventListener("scroll", handleScrollAnimation);
+  window.addEventListener("resize", handleScrollAnimation);
+  window.addEventListener("load", handleScrollAnimation);
+});
