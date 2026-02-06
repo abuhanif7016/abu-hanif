@@ -70,7 +70,7 @@
 
   <!-- Heading -->
   <div class="text-center mb-12">
-    <h2 class="text-3xl sm:text-4xl font-bold text-blue-500 mb-1 sm:mb-2">
+    <h2 class="text-3xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">
       About Me
     </h2>
     <p class="text-gray-500 dark:text-gray-400 sm:text-sm text-xs">
@@ -142,32 +142,242 @@
 
 
 <!-- ================= SKILLS ================= -->
-<section id="skills" class="py-16 sm:py-20 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto w-full">
-  <h2 class="text-3xl sm:text-4xl font-bold text-blue-500 mb-10">Skills</h2>
 
-  <div class="space-y-6">
-    <div>
-      <p class="text-sm sm:text-base font-semibold mb-2">HTML</p>
-      <div class="bg-gray-300 dark:bg-gray-700 h-3 rounded">
-        <div class="skill-bar bg-blue-500 h-3 rounded" data-width="95%"></div>
+<section id="skills" class="bg-secondary text-primary py-16 px-4 transition-colors duration-500 fade-in">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-1 text-primary">Skills</h2>
+    <p class="text-gray-400 mb-8 text-sm">My Technical Level</p>
+
+    <div class="grid md:grid-cols-2 gap-10 text-left">
+
+      <!-- Frontend Developer -->
+      <div>
+  <h3 class="text-xl text-center font-semibold mb- dark:text-white"> Frontend Developer</h3>
+  <p class="text-sm text-gray-400 text-center dark:text-gray-300 mb-4">More than 2.5 years</p>
+
+  <div class="space-y-3">
+
+    <!-- HTML -->
+    <div class="skill p-3 rounded-lg bg-gray-300 dark:bg-gray-800 transition transform hover:-translate-y-1 hover:bg-blue-200/30 hover:shadow-lg">
+      <div class="flex justify-between mb-1">
+        <span class="font-medium">HTML</span>
+        <span class="skill-percent">92%</span>
+      </div>
+      <div class="w-full bg-gray-700 rounded-full h-3">
+        <div class="bg-blue-400 h-3 rounded-full skill-bar" data-percent="92"></div>
       </div>
     </div>
 
-    <div>
-      <p class="text-sm sm:text-base font-semibold mb-2">Tailwind CSS</p>
-      <div class="bg-gray-300 dark:bg-gray-700 h-3 rounded">
-        <div class="skill-bar bg-blue-500 h-3 rounded" data-width="90%"></div>
+    <!-- CSS -->
+    <div class="skill p-3 rounded-lg bg-gray-300 dark:bg-gray-800 transition transform hover:-translate-y-1 hover:bg-red-200/30 hover:shadow-lg">
+      <div class="flex justify-between mb-1">
+        <span class="font-medium">CSS</span>
+        <span class="skill-percent">88%</span>
+      </div>
+      <div class="w-full bg-gray-700 rounded-full h-3">
+        <div class="bg-red-200 h-3 rounded-full skill-bar" data-percent="88"></div>
       </div>
     </div>
 
-    <div>
-      <p class="text-sm sm:text-base font-semibold mb-2">JavaScript</p>
-      <div class="bg-gray-300 dark:bg-gray-700 h-3 rounded">
-        <div class="skill-bar bg-blue-500 h-3 rounded" data-width="85%"></div>
+    <!-- Tailwind -->
+    <div class="skill p-3 rounded-lg bg-gray-300 dark:bg-gray-800 transition transform hover:-translate-y-1 hover:bg-green-200/30 hover:shadow-lg">
+      <div class="flex justify-between mb-1">
+        <span class="font-medium">Tailwind CSS</span>
+        <span class="skill-percent">95%</span>
       </div>
+      <div class="w-full bg-gray-700 rounded-full h-3">
+        <div class="bg-green-400 h-3 rounded-full skill-bar" data-percent="95"></div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="skill p-3 rounded-lg bg-gray-300 dark:bg-gray-800 transition transform hover:-translate-y-1 hover:bg-orange-200/30 hover:shadow-lg">
+      <div class="flex justify-between mb-1">
+        <span class="font-medium">JavaScript</span>
+        <span class="skill-percent">40%</span>
+      </div>
+      <div class="w-full bg-gray-700 rounded-full h-3">
+        <div class="bg-orange-500 h-3 rounded-full skill-bar" data-percent="40"></div>
+      </div>
+    </div>
+
+    <!-- React -->
+    <div class="skill p-3 rounded-lg bg-gray-300 dark:bg-gray-800 transition transform hover:-translate-y-1 hover:bg-yellow-200/30 hover:shadow-lg">
+      <div class="flex justify-between mb-1">
+        <span class="font-medium">React</span>
+        <span class="skill-percent">48%</span>
+      </div>
+      <div class="w-full bg-gray-700 rounded-full h-3">
+        <div class="bg-yellow-200 h-3 rounded-full skill-bar" data-percent="48"></div>
+      </div>
+    </div>
+
+    <!-- Next.js -->
+    <div class="skill p-3 rounded-lg bg-gray-300 dark:bg-gray-800 transition transform hover:-translate-y-1 hover:bg-teal-200/30 hover:shadow-lg">
+      <div class="flex justify-between mb-1">
+        <span class="font-medium">Next.js</span>
+        <span class="skill-percent">25%</span>
+      </div>
+      <div class="w-full bg-gray-700 rounded-full h-3">
+        <div class="bg-teal-500 h-3 rounded-full skill-bar" data-percent="25"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <!-- Designer Skills -->
+
+  <div>
+   <h3 class="text-xl font-semibold mb-1 dark:text-white text-center">Designer Skills</h3>
+   <p class="text-sm text-gray-400 dark:text-gray-300 mb-3 text-center">Tools I Use</p>
+
+  <div class="space-y-3">
+
+    <!-- Photoshop -->
+    <div class="skill p-3 rounded-lg bg-gray-300 dark:bg-gray-800 transition transform hover:-translate-y-1 hover:bg-pink-200/30 hover:shadow-lg">
+      <div class="flex justify-between mb-1">
+        <span class="font-medium">Photoshop</span>
+        <span class="skill-percent">65%</span>
+      </div>
+      <div class="w-full bg-gray-700 rounded-full h-3">
+        <div class="bg-pink-500 h-3 rounded-full skill-bar" data-percent="65"></div>
+      </div>
+    </div>
+
+    <!-- Illustrator -->
+    <div class="skill p-3 rounded-lg bg-gray-300 dark:bg-gray-800 transition transform hover:-translate-y-1 hover:bg-purple-200/30 hover:shadow-lg">
+      <div class="flex justify-between mb-1">
+        <span class="font-medium">Illustrator</span>
+        <span class="skill-percent">75%</span>
+      </div>
+      <div class="w-full bg-gray-700 rounded-full h-3">
+        <div class="bg-purple-500 h-3 rounded-full skill-bar" data-percent="75"></div>
+      </div>
+    </div>
+
+    <!-- Canva -->
+    <div class="skill p-3 rounded-lg bg-gray-300 dark:bg-gray-800 transition transform hover:-translate-y-1 hover:bg-green-200/30 hover:shadow-lg">
+      <div class="flex justify-between mb-1">
+        <span class="font-medium">Canva</span>
+        <span class="skill-percent">90%</span>
+      </div>
+      <div class="w-full bg-gray-700 rounded-full h-3">
+        <div class="bg-green-500 h-3 rounded-full skill-bar" data-percent="90"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+   </div>
+  </div>
+
+</section>
+
+
+<section id="education" class="py-16 px-4 max-w-6xl mx-auto relative">
+
+  <!-- Heading with scroll animation -->
+  <div class="scroll-heading opacity-0 -translate-x-20 transition-all duration-700">
+    <h2 class="text-3xl font-bold mb-4 text-blue-500 text-center">Education</h2>
+    <p class="text-gray-600 dark:text-gray-300 mb-12 text-center">My Academic Background</p>
+  </div>
+
+  <!-- Timeline container -->
+  <div class="relative">
+    <!-- Center line -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-gray-900 dark:bg-white"></div>  
+
+    <!-- Timeline Items -->
+    <div class="space-y-16">
+
+      <!-- Item 1 (Left) -->
+      <div class="relative flex justify-start md:justify-between scroll-animate opacity-0 translate-y-10">
+        <div class="md:w-1/2 pr-8 text-right">
+          <h3 class="text-xl font-semibold text-blue-500">High School</h3>
+          <p class="text-gray-700 dark:text-gray-300 font-medium">XYZ High School</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2015 - 2017</p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Completed Higher Secondary Certificate with focus on Science. Excellent grades in Mathematics and Computer Science.
+          </p>
+        </div>
+        <span class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 dark:bg-blue-400 rounded-full border-2 border-white dark:border-gray-900 top-2"></span>
+      </div>
+
+      <!-- Item 2 (Left) -->
+      <div class="relative flex justify-start md:justify-between scroll-animate opacity-0 translate-y-10">
+        <div class="md:w-1/2 pr-8 text-right">
+          <h3 class="text-xl font-semibold text-blue-500">Diploma in Computer Science & Technology</h3>
+          <p class="text-gray-700 dark:text-gray-300 font-medium">ABC Polytechnic Institute</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2017 - 2020</p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Specialized in Web Development, Database Management, Networking. Hands-on experience with HTML, CSS, JavaScript, and basic React.
+          </p>
+        </div>
+        <span class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 dark:bg-blue-400 rounded-full border-2 border-white dark:border-gray-900 top-2"></span>
+      </div>
+
+      <!-- Item 3 (Right) -->
+      <div class="relative flex justify-end md:justify-between scroll-animate opacity-0 translate-y-10">
+        <span class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 dark:bg-blue-400 rounded-full border-2 border-white dark:border-gray-900 top-2"></span>
+        <div class="md:w-1/2 pl-8 text-left">
+          <h3 class="text-xl font-semibold text-blue-500">Bachelor's (Ongoing)</h3>
+          <p class="text-gray-700 dark:text-gray-300 font-medium">University of XYZ</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2021 - Present</p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Pursuing Bachelor's in Computer Science. Learning advanced web technologies, algorithms, and software engineering.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 4 (Right) -->
+      <div class="relative flex justify-end md:justify-between scroll-animate opacity-0 translate-y-10">
+        <span class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 dark:bg-blue-400 rounded-full border-2 border-white dark:border-gray-900 top-2"></span>
+        <div class="md:w-1/2 pl-8 text-left">
+          <h3 class="text-xl font-semibold text-blue-500">Online Courses & Certifications</h3>
+          <p class="text-gray-700 dark:text-gray-300 font-medium">Coursera / Udemy / FreeCodeCamp</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2019 - Present</p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Completed several online courses in Web Development, React, Next.js, UI/UX design. Continuously upgrading skills.
+          </p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
+<!-- Scroll animation JS -->
+<script>
+const observerEdu = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.remove("opacity-0", "translate-y-10");
+      entry.target.classList.add("opacity-100", "translate-y-0");
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll("#education .scroll-animate").forEach(el => observerEdu.observe(el));
+
+// Heading animation (left to center)
+const observerHeading = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.remove("opacity-0", "-translate-x-20");
+      entry.target.classList.add("opacity-100", "translate-x-0");
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll(".scroll-heading").forEach(el => observerHeading.observe(el));
+</script>
+
+
+
+
 
 <!-- ================= PROJECTS ================= -->
 <section id="projects" class="py-16 sm:py-20 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto w-full">
@@ -194,17 +404,6 @@
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="py-16 sm:py-20 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto w-full">
-  <h2 class="text-3xl sm:text-4xl font-bold text-blue-500 mb-6">Contact</h2>
-  <p class="text-base sm:text-lg mb-2">Email: abuhanif@example.com</p>
-  <p class="text-base sm:text-lg">GitHub: github.com/mdabuhanif</p>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="text-center py-6 text-gray-500">
-  © 2026 Md Abu Hanif — All Rights Reserved
-</footer>
 
 <script src="script.js"></script>
 </body>

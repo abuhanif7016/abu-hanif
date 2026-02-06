@@ -93,3 +93,35 @@ function updateBDTime() {
 
 updateBDTime();
 setInterval(updateBDTime, 1000);
+
+//Frontend Developer Skill Bars Animation
+
+const skillBars = document.querySelectorAll(".skill-bar");
+
+  skillBars.forEach(bar => {
+    const percent = bar.getAttribute("data-percent");
+    bar.style.width = "0%";
+
+    setTimeout(() => {
+      bar.style.width = percent + "%";
+      bar.classList.add("transition-all", "duration-1000");
+    }, 200);
+  });
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const bars = document.querySelectorAll(".skill-bar");
+    bars.forEach(bar => {
+      const percent = bar.getAttribute("data-percent");
+      bar.style.width = percent + "%";
+    });
+  });
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const bars = document.querySelectorAll(".skill-bar");
+    bars.forEach(bar => {
+      const percent = bar.getAttribute("data-percent");
+      bar.style.width = percent + "%";
+    });
+  });
