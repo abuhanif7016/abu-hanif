@@ -174,3 +174,7 @@ const skillBars = document.querySelectorAll(".skill-bar");
   window.addEventListener("resize", handleScrollAnimation);
   window.addEventListener("load", handleScrollAnimation);
 });
+
+
+
+
