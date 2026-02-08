@@ -380,7 +380,7 @@
 
 <!-- ================= SERVICES ================= -->
 <section id="services" class="relative py-20 px-5 md:px-4 max-w-6xl mx-auto">
-  <h2 class="text-4xl font-bold text-center text-text-gray-900 dark:text-gray-100 mb-1 md:mb-2">Services</h2>
+  <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-gray-100 mb-1 md:mb-2">Services</h2>
   <p class="text-center text-gray-500 dark:text-gray-400 mb-8 md:mb-12">
     What I can do for you
   </p>
@@ -468,64 +468,60 @@
 </div>
 
 
-<script>
-const modal = document.getElementById("serviceModal");
-const modalBox = document.getElementById("modalBox");
-const modalContent = document.getElementById("modalContent");
 
-function openService(type) {
-  let items = [];
+<!-- ================= PORTFOLIO SLIDER ================= -->
+<section id="portfolio" class="py-24 px-4 max-w-6xl mx-auto text-white">
 
-  if (type === "web") {
-    items = [
-      "Modern & fast website development",
-      "HTML, CSS, JavaScript",
-      "React & Tailwind CSS",
-      "SEO friendly structure",
-      "Clean & maintainable code"
-    ];
-  }
+  <!-- Heading -->
+  <div class="text-center mb-16">
+    <h2 class="text-4xl md:text-5xl font-bold mb-2 text-gray-900 dark:text-gray-100">Portfolio</h2>
+    <p class="text-gray-500 text-sm md:text-base">Most recent work</p>
+  </div>
 
-  if (type === "ui") {
-    items = [
-      "Clean & modern UI design",
-      "User-friendly UX",
-      "Figma based design",
-      "Color & typography balance",
-      "Responsive layouts"
-    ];
-  }
+  <div class="relative flex items-center justify-center">
 
-  if (type === "responsive") {
-    items = [
-      "Mobile-first design",
-      "Tablet & desktop optimized",
-      "Cross-browser compatibility",
-      "Flexible layouts",
-      "Smooth user experience"
-    ];
-  }
+    <!-- Left Arrow -->
+    <button onclick="prevProject()"
+      class="absolute left-0 top-1/2 -translate-y-1/2 text-4xl text-blue-400 hover:scale-110 transition hidden md:block">‹</button>
 
-  modalContent.innerHTML = items.map(item => `<li>${item}</li>`).join("");
+    <!-- Content -->
+    <div id="sliderBox"
+      class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center max-w-full md:max-w-4xl
+             transition-all duration-500 ease-in-out">
 
-  modal.classList.remove("hidden");
-  setTimeout(() => {
-    modalBox.classList.remove("scale-90", "opacity-0");
-    modalBox.classList.add("scale-100", "opacity-100");
-  }, 10);
-}
+      <!-- Image -->
+      <div class="flex justify-center md:justify-start">
+        <img id="projectImg"
+          class="rounded-xl shadow-xl transition-all duration-500 w-full h-auto max-w-md md:max-w-full"
+          alt="Project">
+      </div>
 
-function closeService() {
-  modalBox.classList.remove("scale-100", "opacity-100");
-  modalBox.classList.add("scale-90", "opacity-0");
-  setTimeout(() => modal.classList.add("hidden"), 300);
-}
+      <!-- Text -->
+      <div class="px-4 md:px-0 text-center md:text-left">
+        <h3 id="projectTitle" class="text-xl md:text-2xl font-semibold mb-3"></h3>
+        <p id="projectDesc" class="text-gray-400 text-sm md:text-base mb-6"></p>
 
-/* Outside click close */
-modal.addEventListener("click", e => {
-  if (e.target === modal) closeService();
-});
-</script>
+        <a id="projectLink" target="_blank"
+          class="inline-flex items-center gap-2 bg-blue-600
+                 px-6 py-3 rounded-lg font-medium
+                 hover:bg-blue-700 transition">
+          Demo →
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Arrow -->
+    <button onclick="nextProject()"
+      class="absolute right-0 top-1/2 -translate-y-1/2 text-4xl text-blue-400 hover:scale-110 transition hidden md:block">›</button>
+  </div>
+
+  <!-- Dots -->
+  <div id="dots" class="flex justify-center gap-2 mt-8"></div>
+</section>
+
+
+
+
 
 
 
